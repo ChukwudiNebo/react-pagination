@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import data from "./data";
+import React, { useEffect, useState } from 'react';
+import data from './data';
 
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,8 +21,8 @@ const Pagination = () => {
     const lastItem = (currentPage - 1) * 10;
     const items = data.slice(lastItem - 10, lastItem);
     console.log(items, currentPage);
-    setItemsPerPage(items);
     if (currentPage > 2) {
+      setItemsPerPage(items);
       setCurrentPage(currentPage - 1);
     }
   };
@@ -30,8 +30,8 @@ const Pagination = () => {
   const next = () => {
     const lastItem = (currentPage + 1) * 10;
     const items = data.slice(lastItem - 10, lastItem);
-    setItemsPerPage(items);
     if (currentPage < 4) {
+      setItemsPerPage(items);
       setCurrentPage(currentPage + 1);
     }
     // console.log(currentPage)
@@ -68,7 +68,7 @@ const Pagination = () => {
           </ul>
         ))}
       </div>
-      <div className="d-flex">
+      <div className='d-flex'>
         <button onClick={() => prev()}>Prev</button>
         <div>
           {arrNumber.map((numberArr, index) => (
