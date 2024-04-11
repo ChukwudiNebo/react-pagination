@@ -98,6 +98,10 @@ const Pagination = ({ data, setPaginatedData, activeState }: any) => {
             className='pagination__img'
           />
         </div>
+
+        <div>
+        checking my data
+        </div>
       </div>
     </>
   );
